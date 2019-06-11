@@ -2,8 +2,8 @@ local ESX = nil
 
 Citizen.CreateThread(function()
     while ESX == nil do
-        TriggerEvent('esx:getSharedObject', function(obj) 
-            ESX = obj 
+        TriggerEvent('esx:getSharedObject', function(obj)
+            ESX = obj
         end)
 
         Citizen.Wait(0)
@@ -36,12 +36,12 @@ TeleportToWaypoint = function()
                     Citizen.Wait(5)
                 end
 
-                ESX.ShowNotification("Teleported.")
+                ESX.ShowNotification("Teleportado.")
             else
-                ESX.ShowNotification("Please place your waypoint.")
+                ESX.ShowNotification("Por favor coloque o seu waypoint.")
             end
         else
-            ESX.ShowNotification("You do not have rights to do this.")
+            ESX.ShowNotification("Você não tem direitos para fazer isso.")
         end
     end)
 end
